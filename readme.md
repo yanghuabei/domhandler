@@ -1,6 +1,12 @@
-# domhandler [![Build Status](https://travis-ci.org/fb55/domhandler.svg?branch=master)](https://travis-ci.org/fb55/domhandler)
+# domhandler [![Build Status](https://travis-ci.org/yanghuabei/domhandler.svg?branch=master)](https://travis-ci.org/yanghuabei/domhandler)
 
 The DOM handler (formally known as DefaultHandler) creates a tree containing all nodes of a page. The tree may be manipulated using the [domutils](https://github.com/fb55/domutils) library.
+
+## Differences with origin domhandler
+1. Add `selfClose` flag to node.
+2. Add `singleQuoteAttribs` map to node.
+
+This project can work with [stricter-htmlparser2](https://github.com/yanghuabei/htmlparser2).
 
 ## Usage
 ```javascript
@@ -13,7 +19,7 @@ Available options are described below.
 ## Example
 ```javascript
 var htmlparser = require("htmlparser2");
-var rawHtml = "Xyz <script language= javascript>var foo = '<<bar>>';< /  script><!--<!-- Waah! -- -->";
+var rawHtml = "Xyz <script language= 'javascript'>var foo = '<<bar>>';< /  script><!--<!-- Waah! -- -->";
 var handler = new htmlparser.DomHandler(function (error, dom) {
     if (error)
     	[...do something for errors...]

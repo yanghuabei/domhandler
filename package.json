@@ -1,5 +1,5 @@
 {
-  "name": "domhandler",
+  "name": "x-domhandler",
   "version": "2.4.2",
   "description": "handler for htmlparser2 that turns pages into a dom",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/fb55/DomHandler.git"
+    "url": "git://github.com/yanghuabei/DomHandler.git"
   },
   "keywords": [
     "dom",
